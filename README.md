@@ -8,6 +8,22 @@
 
 Field note: This is a commons offering, not a commercial product. Use, remix, adapt, and share improvements—especially what fails (that’s where the real learning lives).
 
+## Human–AI collaboration note (provenance)
+
+This commons emerged from a real-world observation (floating fish farms seen from a classroom in Singapore) and an ongoing design conversation between **JH Durbin** and an AI collaborator (ChatGPT, referred to in this project as **Elumannín**).
+
+A useful phrase here is “force multiplier” (with care): a single field observation + a rapid co-design loop can quickly generate
+- clearer system architecture (water/energy/protein/knowledge loops),
+- safer operational rails (containment, solids handling, wildlife safety),
+- and a publishable starting spec that others can test, critique, and improve.
+
+**Important boundaries:**
+- This is not a commercial product, not a finished blueprint, and not professional engineering advice.
+- It is a commons pattern library: hypotheses, diagrams, and protocols meant to be validated locally.
+- The real value is in shared iteration—especially logging what fails and what you change.
+
+**Why it matters:**
+The same platform could support food security experiments with lower pollution pressure *or* function as a small research station where food production is secondary (monitoring water conditions, habitat trials, sensor testing, education, and community science).
 ---
 
 ## 1) What this is
