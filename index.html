@@ -1,80 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gofu Commons · Garden Raft Notes</title>
+  <meta name="description" content="Open notes for a regenerative garden-raft concept: sustainable, modular, and community-buildable." />
 
-The Garden Raft · Commons Notes v0.1
-Sustainable · Open-source · Repairable · Shared learning
-What
-Loops
-Protein
-Logs
-Safety
-Files
-notes
-commons
-v0.1
-many beans
-A raft-scale fish system that closes loops—then publishes the learning.
-This is a commons offering, not a commercial product. Use, remix, adapt, and share improvements—especially what fails (that’s where the real learning lives).
-Open the spec
-Logging guide
-Diagram source
-Daily log CSV
-Weekly log CSV
-North-star
-No soy monopoly. Gofu = a method: any locally growable bean processed into a fish-usable feed.
-The invisible loop
-Shared logs so communities iterate faster — paper-first is fine.
-What this is
-The Garden Raft is a small, sustainable, open-source aquaculture notebook: a solar-powered salt/brackish raft system that turns locally grown beans (“gofu” as method) into stable fish feed — and shares the results so others can adapt it.
-At a glance
-	•	Water loop: filtration + oxygen + circulation
-	•	Energy loop: solar for pumps/sensors
-	•	Protein loop: beans → gofu processing → pellets → fish
-	•	Knowledge loop: shared logs and failures
-Loop A — Water loop
-Goal: stable oxygen + low ammonia + low nitrite.
-	•	Pump intake screen
-	•	Mechanical solids filter (swirl / sock / settle)
-	•	Biofilter media (nitrifying bacteria home)
-	•	Aeration (stone/venturi)
-	•	Return flow back to tank/pen
-Rule: If water clouds or fish gasp → reduce feeding first, then troubleshoot.
+  <style>
+    :root{
+      --bg:#0b1014;
+      --panel:#121821;
+      --panel2:#161f2b;
+      --text:#f2f5f7;
+      --muted:#c7d0d9;
+      --accent:#f4c06b;
+      --border:#283246;
+      --shadow:0 18px 40px rgba(0,0,0,.45);
+      --r:18px;
+      --max:1040px;
+      --font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --serif:ui-serif,Georgia,"Times New Roman",serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:radial-gradient(900px 500px at 20% 0%, rgba(244,192,107,.10), transparent 60%),
+                 radial-gradient(900px 500px at 90% 20%, rgba(120,170,255,.08), transparent 55%),
+                 var(--bg);
+      color:var(--text);
+      font-family:var(--font);
+      line-height:1.55;
+    }
+    a{color:var(--text); text-decoration:underline; text-underline-offset:3px}
+    a:hover{color:var(--accent)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 46px}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 16px; border:1px solid var(--border);
+      background:rgba(18,24,33,.78); backdrop-filter: blur(8px);
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .brand .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+    .brand h1{margin:0; font-size:18px; letter-spacing:.02em}
+    nav{
+      display:flex; flex-wrap:wrap; gap:10px;
+      justify-content:flex-end;
+    }
+    nav a{
+      text-decoration:none;
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:999px;
+      background:linear-gradient(180deg, rgba(22,31,43,.75), rgba(18,24,33,.75));
+      font-size:13px;
+    }
+    nav a:hover{border-color:rgba(244,192,107,.55)}
+    .hero{
+      margin-top:18px;
+      padding:20px 18px;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(22,31,43,.75), rgba(18,24,33,.75));
+      border-radius:var(--r);
+      box-shadow:var(--shadow);
+    }
+    .hero h2{
+      margin:0 0 8px 0;
+      font-family:var(--serif);
+      font-size:26px;
+      letter-spacing:.01em;
+    }
+    .hero p{margin:0; color:var(--muted); max-width:78ch}
+    .grid{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:repeat(12, 1fr);
+      gap:14px;
+    }
+    .card{
+      grid-column: span 6;
+      border:1px solid var(--border);
+      background:rgba(18,24,33,.75);
+      border-radius:var(--r);
+      padding:16px 16px 14px;
+      box-shadow:var(--shadow);
+      min-height:120px;
+    }
+    .card h3{margin:0 0 6px 0; font-size:16px}
+    .card p{margin:0 0 10px 0; color:var(--muted); font-size:14px}
+    .card .links{display:flex; flex-wrap:wrap; gap:10px}
+    .pill{
+      display:inline-block;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      text-decoration:none;
+      font-size:13px;
+      background:rgba(22,31,43,.65);
+    }
+    .pill:hover{border-color:rgba(244,192,107,.55)}
+    .wide{grid-column: span 12}
+    footer{
+      margin-top:18px;
+      padding:16px 16px 14px;
+      border:1px solid var(--border);
+      background:rgba(18,24,33,.70);
+      border-radius:var(--r);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .small{font-size:12px}
+    @media (max-width: 820px){
+      .card{grid-column: span 12}
+      header{flex-direction:column; align-items:flex-start}
+      nav{justify-content:flex-start}
+    }
+    /* Accessibility: make focus visible */
+    a:focus, button:focus, .pill:focus, nav a:focus{
+      outline:2px solid rgba(244,192,107,.9);
+      outline-offset:3px;
+      border-radius:10px;
+    }
+  </style>
+</head>
 
-Loop B — Energy loop
-Goal: pumps + sensors don’t die when the sun blinks.
-	•	Solar panel sized to your pump draw
-	•	Charge controller
-	•	Direct DC pump if possible
-	•	Battery optional but stabilizing
-Loop C — Protein loop (Beans → Gofu → Pellets → Fish)
-Fish generally should not be fed raw legumes. Many beans contain anti-nutritional factors that can reduce digestibility, irritate guts, and foul water fast (clouding → ammonia → oxygen crash).
-Pellet rule (non-negotiable)
-Pellets must hold together in water long enough to be eaten. If pellets crumble: you are feeding the water, not the fish.
-Starter “Gofu Pellet” template (test batch)
-• 60–75% processed bean meal
-• 10–25% cooked starch binder (rice/tapioca/cassava)
-• 5–10% oil/fat source (small amount)
-• optional mineral/vitamin premix (recommended if replacing commercial feed)
+<body>
+  <div class="wrap">
 
-Start with omnivores first. Conservative feeding beats heroic feeding.
-Knowledge loop — Logging
-Daily (2 minutes): behavior, feed amount + batch ID, pH, ammonia, nitrite, changes.
-Weekly (10 minutes): growth notes, mortalities, pellet integrity score (1–5), what worked/failed.
-Open logging guide
-Daily CSV template
-Weekly CSV template
-Safety rails (the “don’t die” list)
-Red flags
-	•	Fish at surface gulping
-	•	Sudden cloudiness
-	•	Sharp smell
-	•	Rising ammonia/nitrite
-Immediate actions
-	1	Stop/reduce feeding
-	2	Increase aeration
-	3	Check pump + filter
-	4	Partial water change if needed (species-dependent)
-Files & licenses
-	•	Docs/diagrams/protocols: CC BY 4.0 (see LICENSE-CC-BY-4.0.md)
-	•	Code: MIT (see LICENSE-MIT)
-	•	Attribution: JH Durbin + collaborators
-Tip: keep one canonical spec in spec/ and link to it from everywhere else.
-Version: v0.1 · Field notes for community iteration · Sustainable by design · Open by default
+    <header>
+      <div class="brand">
+        <div class="kicker">Gofu Commons</div>
+        <h1>Garden Raft Notes</h1>
+      </div>
+
+      <nav aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./spec/the-garden-raft-notes-v0.1.md">Spec</a>
+        <a href="./designs/schematic.md">Schematic</a>
+        <a href="./logs/README-logging.md">Logging</a>
+        <a href="./README.md">Repo README</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="What this is">
+      <h2>Sustainable · Open Source · Buildable</h2>
+      <p>
+        This repository is a living notebook for a modular “garden raft” concept—meant to support regenerative,
+        low-cost food experiments (including non-soy “gofu” feed pathways) with clear documentation, simple logging,
+        and community iteration.
+      </p>
+    </section>
+
+    <section class="grid" aria-label="Quick links">
+
+      <article class="card" aria-label="Core notes">
+        <h3>Core notes</h3>
+        <p>Start here for the main written spec and the repo overview.</p>
+        <div class="links">
+          <a class="pill" href="./spec/the-garden-raft-notes-v0.1.md">Open spec notes (v0.1)</a>
+          <a class="pill" href="./README.md">README</a>
+        </div>
+      </article>
+
+      <article class="card" aria-label="Designs">
+        <h3>Designs</h3>
+        <p>Schematic and design sketches / drafts as they evolve.</p>
+        <div class="links">
+          <a class="pill" href="./designs/schematic.md">Schematic (MD)</a>
+        </div>
+      </article>
+
+      <article class="card" aria-label="Logging">
+        <h3>Logging</h3>
+        <p>Simple templates for tracking water conditions, feed, and observations.</p>
+        <div class="links">
+          <a class="pill" href="./logs/README-logging.md">Logging guide</a>
+          <a class="pill" href="./logs/daily-log-template.csv">Daily log template (CSV)</a>
+          <a class="pill" href="./logs/weekly-log-template.csv">Weekly log template (CSV)</a>
+        </div>
+      </article>
+
+      <article class="card" aria-label="Licenses">
+        <h3>Licensing</h3>
+        <p>Clear licensing so others can reuse and improve the work responsibly.</p>
+        <div class="links">
+          <a class="pill" href="./LICENSE-CC-BY-4.0.md">CC BY 4.0 (docs)</a>
+          <a class="pill" href="./LICENSE-MIT">MIT (code)</a>
+        </div>
+      </article>
+
+      <article class="card wide" aria-label="Project notes">
+        <h3>Project stance</h3>
+        <p>
+          The goal here is not perfection; it’s a commons: readable notes, testable ideas, and a trail of revisions.
+          If something breaks, we fix it and leave a trace.
+        </p>
+      </article>
+
+    </section>
+
+    <footer>
+      <div>
+        <strong>Gofu Commons · Garden Raft Notes</strong><br />
+        <span class="small">If links ever act weird on GitHub Pages, verify the file names match exactly (case-sensitive).</span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
