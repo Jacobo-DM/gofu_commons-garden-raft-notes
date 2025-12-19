@@ -119,3 +119,4 @@ A good Spoovel House leaves people feeling:
 - more capable
 - more connected
 - more willing to tend
+ 
