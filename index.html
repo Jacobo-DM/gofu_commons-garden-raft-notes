@@ -41,9 +41,7 @@
       border-radius:var(--r);
       box-shadow:var(--shadow);
     }
-    .brand{
-      display:flex; flex-direction:column; gap:2px;
-    }
+    .brand{display:flex; flex-direction:column; gap:2px}
     .brand .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
     .brand h1{margin:0; font-size:18px; letter-spacing:.02em}
     nav{
@@ -118,7 +116,6 @@
       header{flex-direction:column; align-items:flex-start}
       nav{justify-content:flex-start}
     }
-    /* Accessibility: make focus visible */
     a:focus, button:focus, .pill:focus, nav a:focus{
       outline:2px solid rgba(244,192,107,.9);
       outline-offset:3px;
@@ -138,14 +135,14 @@
 
       <nav aria-label="Primary">
         <a href="./index.html">Home</a>
-        <a href="./specs/the-garden-raft-notes-v0.1.md">Spec</a>
+        <a href="./spec/the-garden-raft-notes-v0.1.md">Spec</a>
         <a href="./designs/schematic.md">Schematic</a>
         <a href="./logs/README-logging.md">Logging</a>
-        <a href="./specs/knowledge-loop-intergarden.md">Knowledge Loop</a>
-        <a href="./specs/ecological-safeguards.md">Ecological Safeguards</a>
-        <a href="./specs/spoovel-and-circular-extensions.md">Extensions</a>
-        <a href="./specs/roof-microfield-terrace-notes.md">Roof Microfield</a>
-        <a href="./specs/tide-pool-lab-discoverymode.md">Tide Pool Lab</a>
+        <a href="./spec/knowledge-loop-intergarden.md">Knowledge Loop</a>
+        <a href="./spec/ecological-safeguards.md">Ecological Safeguards</a>
+        <a href="./spec/spoovel-and-circular-extensions.md">Extensions</a>
+        <a href="./spec/roof-microfield-terrace-notes.md">Roof Microfield</a>
+        <a href="./spec/tide-pool-lab-discoverymode.md">Tide Pool Lab</a>
         <a href="./README.md">Repo README</a>
       </nav>
     </header>
@@ -165,7 +162,7 @@
         <h3>Core notes</h3>
         <p>Start here for the main written spec and the repo overview.</p>
         <div class="links">
-          <a class="pill" href="./specs/the-garden-raft-notes-v0.1.md">Open spec notes (v0.1)</a>
+          <a class="pill" href="./spec/the-garden-raft-notes-v0.1.md">Open spec notes (v0.1)</a>
           <a class="pill" href="./README.md">README</a>
         </div>
       </article>
@@ -174,9 +171,9 @@
         <h3>Spec</h3>
         <p>Protocols, safeguards, and reusable pages (the “how we do this” layer).</p>
         <div class="links">
-          <a class="pill" href="./specs/spoovel-house-v0.1.md">Spoovel House (Tending Vessel)</a>
-          <a class="pill" href="./specs/ecological-safeguards.md">Ecological Safeguards</a>
-          <a class="pill" href="./specs/knowledge-loop-intergarden.md">Knowledge Loop</a>
+          <a class="pill" href="./spec/spoovel-house-v0.1.md">Spoovel House (Tending Vessel)</a>
+          <a class="pill" href="./spec/ecological-safeguards.md">Ecological Safeguards</a>
+          <a class="pill" href="./spec/knowledge-loop-intergarden.md">Knowledge Loop</a>
         </div>
       </article>
 
@@ -198,7 +195,7 @@
         </div>
       </article>
 
-      <article class="card" aria-label="Licenses">
+      <article class="card" aria-label="Licensing">
         <h3>Licensing</h3>
         <p>Clear licensing so others can reuse and improve the work responsibly.</p>
         <div class="links">
@@ -220,7 +217,7 @@
     <footer>
       <div>
         <strong>Gofu Commons · Garden Raft Notes</strong><br />
-        <span class="small">If links ever act weird on GitHub Pages, verify the file names match exactly (case-sensitive).</span>
+        <span class="small">Tip: links are case-sensitive. If something 404s, verify the filename matches exactly.</span>
       </div>
     </footer>
 
