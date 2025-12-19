@@ -94,5 +94,5 @@ This is a **commons effort**. It will always be a work in progress because:
 - community knowledge evolves (including Indigenous and place-based wisdom)
 - green technologies improve (materials, sensors, filtration, energy systems)
 - new adaptations and failure lessons should be added back into the commons
-
+ 
 If you build, test, or learn something here—especially if something breaks—please **leave a trace** so others can iterate with clearer sight.
