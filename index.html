@@ -44,10 +44,7 @@
     .brand{display:flex; flex-direction:column; gap:2px}
     .brand .kicker{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
     .brand h1{margin:0; font-size:18px; letter-spacing:.02em}
-    nav{
-      display:flex; flex-wrap:wrap; gap:10px;
-      justify-content:flex-end;
-    }
+    nav{display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end}
     nav a{
       text-decoration:none;
       border:1px solid var(--border);
@@ -116,7 +113,7 @@
       header{flex-direction:column; align-items:flex-start}
       nav{justify-content:flex-start}
     }
-    a:focus, button:focus, .pill:focus, nav a:focus{
+    a:focus, .pill:focus, nav a:focus{
       outline:2px solid rgba(244,192,107,.9);
       outline-offset:3px;
       border-radius:10px;
@@ -135,14 +132,19 @@
 
       <nav aria-label="Primary">
         <a href="./index.html">Home</a>
-        <a href="./spec/the-garden-raft-notes-v0.1.md">Spec</a>
+
+        <!-- These three are in repo root (per your screenshot) -->
+        <a href="./knowledge-loop-intergarden.md">Knowledge Loop</a>
+        <a href="./ecological-safeguards.md">Ecological Safeguards</a>
+        <a href="./roof-microfield-terrace-notes.md">Roof Microfield</a>
+
+        <!-- Tide Pool Lab is the only file currently inside /spec -->
+        <a href="./spec/tide-pool-lab-discoverymode.md">Tide Pool Lab</a>
+
+        <!-- Likely folders from earlier (keep if you have them) -->
         <a href="./designs/schematic.md">Schematic</a>
         <a href="./logs/README-logging.md">Logging</a>
-        <a href="./spec/knowledge-loop-intergarden.md">Knowledge Loop</a>
-        <a href="./spec/ecological-safeguards.md">Ecological Safeguards</a>
-        <a href="./spec/spoovel-and-circular-extensions.md">Extensions</a>
-        <a href="./spec/roof-microfield-terrace-notes.md">Roof Microfield</a>
-        <a href="./spec/tide-pool-lab-discoverymode.md">Tide Pool Lab</a>
+
         <a href="./README.md">Repo README</a>
       </nav>
     </header>
@@ -160,26 +162,26 @@
 
       <article class="card" aria-label="Core notes">
         <h3>Core notes</h3>
-        <p>Start here for the main written spec and the repo overview.</p>
+        <p>Start with the core protocols and the repo overview.</p>
         <div class="links">
-          <a class="pill" href="./spec/the-garden-raft-notes-v0.1.md">Open spec notes (v0.1)</a>
           <a class="pill" href="./README.md">README</a>
+          <a class="pill" href="./knowledge-loop-intergarden.md">Knowledge Loop</a>
         </div>
       </article>
 
-      <article class="card" aria-label="Spec highlights">
-        <h3>Spec</h3>
-        <p>Protocols, safeguards, and reusable pages (the “how we do this” layer).</p>
+      <article class="card" aria-label="Spec pages">
+        <h3>Spec pages</h3>
+        <p>Working specs and safeguards (some are in root, Tide Pool Lab lives in /spec).</p>
         <div class="links">
-          <a class="pill" href="./spec/spoovel-house-v0.1.md">Spoovel House (Tending Vessel)</a>
-          <a class="pill" href="./spec/ecological-safeguards.md">Ecological Safeguards</a>
-          <a class="pill" href="./spec/knowledge-loop-intergarden.md">Knowledge Loop</a>
+          <a class="pill" href="./ecological-safeguards.md">Ecological Safeguards</a>
+          <a class="pill" href="./roof-microfield-terrace-notes.md">Roof Microfield</a>
+          <a class="pill" href="./spec/tide-pool-lab-discoverymode.md">Tide Pool Lab (spec/)</a>
         </div>
       </article>
 
       <article class="card" aria-label="Designs">
         <h3>Designs</h3>
-        <p>Schematic and design sketches / drafts as they evolve.</p>
+        <p>Schematic and design drafts as they evolve.</p>
         <div class="links">
           <a class="pill" href="./designs/schematic.md">Schematic (MD)</a>
         </div>
@@ -187,11 +189,11 @@
 
       <article class="card" aria-label="Logging">
         <h3>Logging</h3>
-        <p>Simple templates for tracking water conditions, feed, and observations.</p>
+        <p>Templates for tracking water conditions, feed, and observations.</p>
         <div class="links">
           <a class="pill" href="./logs/README-logging.md">Logging guide</a>
-          <a class="pill" href="./logs/daily-log-template.csv">Daily log template (CSV)</a>
-          <a class="pill" href="./logs/weekly-log-template.csv">Weekly log template (CSV)</a>
+          <a class="pill" href="./logs/daily-log-template.csv">Daily log (CSV)</a>
+          <a class="pill" href="./logs/weekly-log-template.csv">Weekly log (CSV)</a>
         </div>
       </article>
 
@@ -204,7 +206,7 @@
         </div>
       </article>
 
-      <article class="card wide" aria-label="Project notes">
+      <article class="card wide" aria-label="Project stance">
         <h3>Project stance</h3>
         <p>
           The goal here is not perfection; it’s a commons: readable notes, testable ideas, and a trail of revisions.
@@ -217,7 +219,7 @@
     <footer>
       <div>
         <strong>Gofu Commons · Garden Raft Notes</strong><br />
-        <span class="small">Tip: links are case-sensitive. If something 404s, verify the filename matches exactly.</span>
+        <span class="small">Tip: GitHub Pages links are case-sensitive and path-sensitive.</span>
       </div>
     </footer>
 
